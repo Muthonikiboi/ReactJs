@@ -12,13 +12,14 @@ const student = {
 
 //const myname = student.name;
 //const reg = student.RegNo;
-const { name, RegNo } = student;
+const { name, RegNo, course } = student;
 const {
   Hobbies: { eating },
 } = student;
 console.log(eating);
 console.log(name);
 console.log(RegNo);
+console.log(course);
 
 //destructuting in arrays
 const fruits = ["apples", "mango", "pinapple", "berrie", "banana", "orange"];
