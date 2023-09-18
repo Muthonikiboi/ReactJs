@@ -38,6 +38,9 @@ const {
   course2: [, loc],
 } = courses;
 console.log(loc);
+//how to use spread to add an element in an array
+const newfruit = [...fruits, "oranges"];
+newfruit;
 
 //tamplete literals
 const bookTitle = "MOANA";
