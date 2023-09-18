@@ -46,3 +46,7 @@ newfruit;
 const bookTitle = "MOANA";
 const statement = `This book is called ${bookTitle}`;
 console.log(statement);
+
+//using split in template literals
+const statement2 = `this book is called ${bookTitle.split("->")[0]}`;
+statement2;
