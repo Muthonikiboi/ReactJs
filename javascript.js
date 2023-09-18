@@ -38,3 +38,8 @@ const {
   course2: [, loc],
 } = courses;
 console.log(loc);
+
+//tamplete literals
+const bookTitle = "MOANA";
+const statement = `This book is called ${bookTitle}`;
+console.log(statement);
