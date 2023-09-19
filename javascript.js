@@ -1,6 +1,7 @@
 //DESTRUCTURING OBJECTS AND ARRAYS
 const student = {
   name: "Joy Kiboi",
+  years: 13,
   RegNo: "e234hdbhek",
   course: "Bsc IT",
   Hobbies: {
@@ -50,3 +51,12 @@ console.log(statement);
 //using split in template literals
 const statement2 = `this book is called ${bookTitle.split("->")[0]}`;
 statement2;
+
+//ternaries (if else statements)
+const years = 13;
+const isJoy = years >= 13 ? "Joy is still young" : "Joy is old";
+isJoy;
+console.log(`It is said that ${isJoy}`);
+
+//using ternaries in template li
+console.log(`${isJoy}. she is ${years <= 20 ? " a baby" : " an adult"}`);
