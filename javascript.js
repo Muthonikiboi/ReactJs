@@ -58,5 +58,22 @@ const isJoy = years >= 13 ? "Joy is still young" : "Joy is old";
 isJoy;
 console.log(`It is said that ${isJoy}`);
 
-//using ternaries in template li
+//using ternaries in template literals
 console.log(`${isJoy}. she is ${years <= 20 ? " a baby" : " an adult"}`);
+
+//Javascript arrow functions
+//with no arguments
+let hername = () => console.log("Joy Kiboi");
+hername();
+
+//with one argument
+let bbg = (x) => console.log(x);
+bbg("Lilian Kiboi");
+
+//with muliple arguments
+let calc = (a, b, c) => {
+  let result = a * b + c;
+  return result;
+};
+let result1 = calc(2, 4, 9);
+console.log(result1);
