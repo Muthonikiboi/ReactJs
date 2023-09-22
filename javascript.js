@@ -77,3 +77,23 @@ let calc = (a, b, c) => {
 };
 let result1 = calc(2, 4, 9);
 console.log(result1);
+
+//Optional chaining & nullish coalescing operator
+const school = {
+  schName: "Dedan Kimathi University of Technology",
+  location: "Nyeri",
+  levels: ["Bsc", "Diploma", "Masters"],
+  courses: {
+    science: "Computer Science",
+    engineering: "Civil Engineering",
+  },
+};
+
+const schoolCourse = school.courses?.engineering;
+console.log(schoolCourse);
+//for a value missing in the object
+const studentsNo = school.studentsNumber?.male;
+console.log(studentsNo);
+//using nullish coalescing operator
+const studentNo = school.studentsNumber?.female ?? 4567;
+console.log(studentNo);
