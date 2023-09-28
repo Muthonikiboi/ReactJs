@@ -97,3 +97,18 @@ console.log(studentsNo);
 //using nullish coalescing operator
 const studentNo = school.studentsNumber?.female ?? 4567;
 console.log(studentNo);
+
+//Arrays in React
+//Array Reduce ,sort ,filter
+
+const arr = [4, 8, 0, 9, 6, 3, 1, 5, 2, 7];
+function reduceArray(arr) {
+  if (arr % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const reducedArray = arr.filter(reduceArray);
+console.log(reducedArray);
