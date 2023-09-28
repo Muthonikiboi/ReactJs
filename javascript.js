@@ -112,3 +112,15 @@ function reduceArray(arr) {
 
 const reducedArray = arr.filter(reduceArray);
 console.log(reducedArray);
+
+//sorting
+const sortedArray = arr.sort();
+console.log(sortedArray);
+
+//reduce
+const its_name = ["Suberian ", "Husky"];
+function joinName(acc, curVal) {
+  return acc + curVal;
+}
+const joinedName = its_name.reduce(joinName);
+console.log(joinedName);
