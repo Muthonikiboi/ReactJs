@@ -77,15 +77,19 @@ function Menu() {
       <h2>Our Menu</h2>
 
       {numPizzas > 0 ? (
-        <ul className="pizzas">
-          {pizzas.map((food) => (
-            <Pizza pizzaObj={food} />
-          ))}
-        </ul>
+        // {/*using react fragments*/}
+        <>
+          <p>
+            Welcome to this pizza hotel you canm order eat from the comfort of
+            our seats and get priviledges
+          </p>
+          <ul className="pizzas">
+            {pizzas.map((food) => (
+              <Pizza pizzaObj={food} />
+            ))}
+          </ul>
+        </>
       ) : null}
-
-
-      
 
       {/* <Pizza
         name="Pizza Spinaci'"
@@ -103,15 +107,25 @@ function Menu() {
   );
 }
 
-function Pizza(props) {
-  console.log(props);
+function Pizza({ pizzaObj }) {
+  //console.log(PROPS);
   return (
-    <li className="pizza">
-      <img src={props.pizzaObj.photoName} alt={props.name} />
+    <li className={`pizza $(pizzaObj.soldOut ? "Sold-Out": "")`}>
+      <img src={pizzaObj.photoName} alt={pizzaObj.name} />
       <div>
-        <h3>{props.pizzaObj.name}</h3>
-        <p>{props.pizzaObj.ingredients}</p>
-        <span>{props.pizzaObj.price + 400}</span>
+        <h3>{pizzaObj.name}</h3>
+
+        <p>{pizzaObj.ingredients}</p>
+
+        {/*{pizzaObj.soldOut ? (
+          <span>sold out</span>
+        ) : (
+          <span>{pizzaObj.price}</span>
+        )}*/}
+
+        {/*more prefrable use the second statement*/}
+
+        <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price + 400}</span>
       </div>
     </li>
   );
@@ -124,6 +138,12 @@ function Footer() {
   const isOpen = hour >= openHour && hour <= closeHour;
   console.log(isOpen);
 
+  if (!isOpen)
+    return (
+      <p>
+        You are welcome between {openHour}:00 & {closeHour}:00
+      </p>
+    );
   //if (hour >= openHour && hour <= closeHour)alert("We are currently open!");
   //else alert("We are currently closed!");
   return (
@@ -131,12 +151,7 @@ function Footer() {
       {/* {new Date().toLocaleTimeString()}. We are currently open. */}
 
       {isOpen ? (
-        <div className="footer">
-          <p>
-            You are welcome between {openHour}:00 & {closeHour}:00
-          </p>
-          <button className="btn">Order</button>
-        </div>
+        <Order closeHour={closeHour} openHour={openHour} />
       ) : (
         <p>We are closed {closeHour}:00</p>
       )}
@@ -145,6 +160,18 @@ function Footer() {
   //return React.createElement("footer", null, "We are currently open");
 }
 
+function Order(openHour, closeHour) {
+  return (
+    <div className="footer">
+      <p>
+        You are welcome between {openHour}:00 & {closeHour}:00
+      </p>
+      <button className="btn">Order</button>
+    </div>
+  );
+}
+
+//when the component becomes too lon
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
