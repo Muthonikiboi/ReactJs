@@ -1,4 +1,3 @@
-
 export function Intro(){
     return(
         <article>
@@ -12,11 +11,22 @@ export function Intro(){
 }
 
 export function Profile(){
+    const avatar ="https://i.imgur.com/MK3eW3Am.jpg"
+    const description ="Katherine Johnson"
+
     return(
         <img
-            src="https://i.imgur.com/MK3eW3Am.jpg"
-            alt="Katherine Johnson"
+        className="avatar"
+            src={avatar}
+            alt={description}
     />
+    )
+}
+
+export function MyDetails(){
+const name = "Joy Elizabeth Muthoni Kiboi"
+    return(
+        <h3>My name is {name}.I am an aspiring frontend developer, data analyst and data scientist</h3>
     )
 }
 
