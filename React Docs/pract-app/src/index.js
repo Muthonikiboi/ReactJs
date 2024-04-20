@@ -6,6 +6,7 @@ import Gallery from "./Gallery.js";
 import { MyDetails } from './Gallery.js';
 import Persons from './props.js';
 import PackingList from './con_rendering.js';
+import FruitList from './Lists.js';
 
 export default function App(){
     return (
@@ -15,6 +16,7 @@ export default function App(){
         <MyDetails/>
         <Persons/>
         <PackingList/>
+        <FruitList/>
         </>
     )
 }
