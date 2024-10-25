@@ -9,6 +9,7 @@ import PackingList from './con_rendering.js';
 import FruitList from './Lists.js';
 import Interactivity from './addinginteractivity.js';
 import LearnStates from './state1.js';
+import Snapshot from './snapshot.js';
 
 export default function App(){
     return (
@@ -21,6 +22,7 @@ export default function App(){
         <FruitList/>
         <Interactivity/>
         <LearnStates/>
+        <Snapshot/>
         </>
     )
 }
